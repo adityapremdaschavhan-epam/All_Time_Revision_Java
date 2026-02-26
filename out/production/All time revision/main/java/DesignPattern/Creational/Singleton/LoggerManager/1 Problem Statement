@@ -1,0 +1,10 @@
+PROBLEM 2 — For IMPLEMENTATION (You will solve)
+📌 Problem Statement (NO SOLUTION GIVEN)
+
+Design a Logger Manager such that:
+Only one logger instance exists
+Multiple threads can log messages safely
+Logger should be lazily initialized
+Prevent multiple instances in multithreaded environment
+
+👉 You will implement this..........<<<<<<<<<<<<<...>>>>>>>>>>>>

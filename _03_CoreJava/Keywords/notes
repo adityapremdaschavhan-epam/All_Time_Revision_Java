@@ -1,0 +1,48 @@
+final
+
+final class
+{
+ whenever to store congigration
+ secret info
+}
+
+*************************************************************
+private class vs final class
+1️⃣ private class (Only for Inner Classes)
+❌ This is ILLEGAL
+private class A { }
+
+📌 Reason:
+A top-level class must be visible to the outside world
+private would make it inaccessible
+✅ Legal Usage (Inner Class)
+class Bank {
+    private class Account {
+        void details() {
+            System.out.println("Account details");
+        }
+    }
+    void show() {
+        Account acc = new Account();
+        acc.details();
+    }
+}
+🧠 Meaning of private class
+Accessible only inside the outer class
+Hidden from other classes
+Used for internal helper logic
+
+*********************************************************
+1) pattern matching in switch
+Object obj = 2131892221;
+        switch (obj) {
+//            case String s && s.length() > 5 -> System.out.println("Long string");
+            case String s ->System.out.println("Short string");
+            case Long i  -> System.out.println("Positive number");
+            default -> System.out.println("Other");
+        }
+
+
+operator overloading:-
+while matching it first chek that datatype then primitve then wrapper class object.
+

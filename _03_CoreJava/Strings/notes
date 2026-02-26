@@ -1,0 +1,22 @@
+strings/
+│
+├── 01_character_frequency/
+│   ├── when_to_apply.md
+│   ├── template.java
+│   ├── mistakes.md
+│
+├── 02_palindrome/
+│   ├── when_to_apply.md
+│   ├── template.java
+│   ├── mistakes.md
+│
+├── 03_string_matching/
+│   ├── when_to_apply.md
+│   ├── kmp_template.java
+│   ├── rabin_karp_template.java
+│   ├── mistakes.md
+│
+├── 04_string_transformation/
+│   ├── when_to_apply.md
+│   ├── template.java
+│   ├── mistakes.md

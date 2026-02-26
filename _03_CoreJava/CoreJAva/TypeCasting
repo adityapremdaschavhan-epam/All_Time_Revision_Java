@@ -1,0 +1,31 @@
+implicit
+
+explicit
+
+upstream cast
+
+downstream cast
+
+class Animal {
+    void sound() {
+        System.out.println("Animal makes sound");
+    }
+}
+
+class Dog extends Animal {
+    void sound() {
+        System.out.println("Dog barks");
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Animal a = new Dog();   // Upcasting
+
+        if( a instanceof Dog ) {
+          Dog d = (Dog) a;        // Downcasting :- class cast exception
+          d.bark();
+        }
+
+    }
+}

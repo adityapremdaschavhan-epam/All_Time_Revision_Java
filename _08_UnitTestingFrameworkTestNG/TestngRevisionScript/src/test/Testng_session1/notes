@@ -1,0 +1,117 @@
+try to disrupt the app find loop hole
+not to find the defect do not create loophole(usecase)
+
+1) testng advantages :-
+ci/cd
+
+2) a) .properties for env variables
+    eg :- db details config
+        production config
+
+    b) how to passed env variables  (taken by jvm)
+    ans :-
+    maven profiles (multiple testng.xml) no need to change testng's
+    mvn test -d profile
+
+3) sure fire plugins :- to identify @test at mvn test life cycle
+
+4) never launch a browser before test launch "before every methods"
+
+5) assertions :- reduce boiler code
+    assertNotNull,
+
+6) depends overwrite priority
+
+7) a)difference between contestant (runs before every @test) launch browser
+    and @beforetest (before <test>)
+
+    b)listener runs in background in jvm
+    annotations runs by testng framework
+
+8) data
+    store in separate files
+        yaml more preferred
+        json preferred not best for understanding
+        excel is volatile cannot be trusted
+        which is best to use
+
+9)reporters:-
+    extend enhance than testng give us html file
+    allures more enhance tha  extend picturisation and graph
+    testng
+    report portal :-  epam opensource portal
+                      own instance report portal.io
+                      all report for past execution and we can create dashboard
+                      synchronous execution is going in background
+                      auto analysis of test cases like (git ai) -
+                      uses ml concepts for automation framework like testng,junit
+
+
+10) bug life cycle
+ headline
+ description
+ expected and actual;l
+ envirnment
+ snapshot
+ priority severity
+    egample :- high priorty and low sveerity -> company logo.
+
+    jira boards
+
+        bug life cycle
+        new
+        assigned
+        in progress
+        done
+        retest
+        closed
+
+        after all the bug is fixed -> then we can do regresion test
+        for each bug fixed ->
+
+11) schema validation :- validating,datatype key.
+    to make sure integration should work -> we do contract testing (schema validation)
+    scenario :- microservices
+
+12) test pyramid. api -> integration -> ui
+
+13)
+
+
+to do's:-
+how to passed env variables  (taken by jvm)
+ans :-
+maven profiles (multiple testng.xml) no need to change testng's
+mvn test -d profile
+
+--------------home task------------
+
+2) create 9 test
+    3 test sequence
+    3 test parallel
+    3 test group parallel
+
+3) home task_______________________________
+a) create a maven
+with multiple properties
+
+b) create properties in resources -> qa,prod,test
+url=
+password
+
+c) use this properties
+mvn test -qa -> go and test execute
+    stage prod without changing the code
+
+d) testng .xml ->
+pom.xml-> all the dependence
+
+e) difference between extend and allures and report.
+try all these in project
+
+f) modify these cases with selenium
+
+g) modify these with bdd
+
+
+

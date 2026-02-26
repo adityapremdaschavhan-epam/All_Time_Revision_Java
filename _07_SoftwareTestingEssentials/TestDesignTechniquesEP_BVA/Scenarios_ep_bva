@@ -1,0 +1,123 @@
+SCENARIO 1: Password Validation
+📌 Requirement Gathering
+
+Password length: 8–16 characters
+Must contain at least one uppercase, one lowercase, one digit
+Special characters allowed
+No spaces
+
+🧠 Test Planning Decisions
+Test Type: Functional, Security
+Risk: Weak password → security issue
+
+Technique Choice:
+EP → different password categories
+BVA → length boundaries (8 & 16)
+
+🔹 EP (Equivalence Partitioning)
+Partition	Example	        Expected
+Valid	    Abc@1234	    Accepted
+Invalid     (too short)Ab1@	Rejected
+Invalid     (too long)17-char pwd	Rejected
+Invalid     (missing rule)	abcdefghi	Rejected
+
+🔹 BVA (Boundary Value Analysis – Length)
+Value	Reason	Expected
+7 chars	Below min	Rejected
+8 chars	Min boundary	Accepted
+16 chars	Max boundary	Accepted
+17 chars	Above max	Rejected
+🔹 SCENARIO 2: Salary Input
+📌 Requirement Gathering
+
+Salary must be between 10,000 and 1,00,000
+
+Only numeric values allowed
+
+🧠 Test Planning Decisions
+
+Test Type: Functional
+
+Risk: Incorrect eligibility calculation
+
+Technique Choice:
+
+EP → numeric ranges
+
+BVA → salary limits
+
+🔹 EP
+Partition	Value	Expected
+Valid	50,000	Accepted
+Invalid (<10k)	8,000	Rejected
+Invalid (>1L)	1,20,000	Rejected
+Invalid (non-numeric)	abc	Error
+🔹 BVA
+Value	Expected
+9,999	Rejected
+10,000	Accepted
+1,00,000	Accepted
+1,00,001	Rejected
+🔹 SCENARIO 3: Marks Entry
+📌 Requirement Gathering
+
+Marks range: 0–100
+
+Decimal values not allowed
+
+🧠 Test Planning Decisions
+
+Test Type: Functional
+
+Risk: Wrong grading
+
+Technique Choice:
+
+EP → valid/invalid score ranges
+
+BVA → score edges
+
+🔹 EP
+Partition	Value	Expected
+Valid	75	Accepted
+Invalid (<0)	-5	Rejected
+Invalid (>100)	105	Rejected
+Invalid (decimal)	85.5	Rejected
+🔹 BVA
+Value	Expected
+-1	Rejected
+0	Accepted
+100	Accepted
+101	Rejected
+🔹 SCENARIO 4: Date of Birth (DOB)
+📌 Requirement Gathering
+
+Age must be 18 years or above
+
+Date format: DD-MM-YYYY
+
+Future dates not allowed
+
+🧠 Test Planning Decisions
+
+Test Type: Functional, Boundary
+
+Risk: Legal/business compliance
+
+Technique Choice:
+
+EP → valid/invalid age categories
+
+BVA → exact age boundary (18)
+
+🔹 EP
+Partition	DOB Example	Expected
+Valid	20-year old DOB	Accepted
+Invalid (<18)	16-year old DOB	Rejected
+Invalid (future)	Next year date	Rejected
+Invalid format	2025/10/10	Error
+🔹 BVA (Age Boundary)
+Age	Expected
+17 years 364 days	Rejected
+Exactly 18 years	Accepted
+18 years + 1 day	Accepted

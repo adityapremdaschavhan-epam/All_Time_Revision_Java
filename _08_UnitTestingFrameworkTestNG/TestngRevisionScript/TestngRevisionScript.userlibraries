@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="Maven: org.slf4j:slf4j-api:1.7.36">
+    <archive path="C:/Users/AdityaPremdasChavhan/.m2/repository/org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar" />
+  </library>
+  <library name="Maven: org.testng:testng:7.10.1">
+    <archive path="C:/Users/AdityaPremdasChavhan/.m2/repository/org/testng/testng/7.10.1/testng-7.10.1.jar" />
+  </library>
+  <library name="Maven: org.webjars:jquery:3.7.1">
+    <archive path="C:/Users/AdityaPremdasChavhan/.m2/repository/org/webjars/jquery/3.7.1/jquery-3.7.1.jar" />
+  </library>
+  <library name="Maven: com.beust:jcommander:1.82">
+    <archive path="C:/Users/AdityaPremdasChavhan/.m2/repository/com/beust/jcommander/1.82/jcommander-1.82.jar" />
+  </library>
+</eclipse-userlibraries>
+

@@ -1,0 +1,29 @@
+Problem Statement
+
+You are building a Cross-Platform UI Toolkit.
+Your application should support multiple operating systems:
+Windows
+macOS
+
+Each operating system provides its own UI components:
+Button
+Checkbox
+
+Requirement
+UI components must be platform-specific
+Components from the same platform must be used together
+Client code should not depend on concrete classes
+Switching platform should be easy (Windows → macOS)
+
+What this problem tests
+Understanding of family of related objects
+Why Factory alone is not enough
+How Abstract Factory enforces consistency
+
+Hint
+Think in terms of:
+Button interface
+Checkbox interface
+UIFactory abstract factory
+WindowsUIFactory, MacUIFactory
+

@@ -1,0 +1,145 @@
+🏦🎓 Student Reward & Banking System — Problem Statement
+
+📌 Background
+
+You are developing a console-based Java application for an educational institute.
+
+The institute rewards top-performing students by depositing money into their bank accounts.
+After receiving the reward, students are allowed to withdraw money, subject to validation rules.
+
+The system must be robust, fault-tolerant, and use proper exception handling at every layer.
+____________________________________________________________________________________________
+
+🧾 Student Details
+Each student has the following attributes:
+id → unique student identifier
+name → student name
+marks → marks obtained (0–100)
+bankBalance → current bank balance
+
+🎯 Functional Requirements
+
+1️⃣ Student Data Input
+Student data is loaded from an external source (file / simulated file method).
+The file may not exist or may be unreadable.
+The system must not crash due to file-related issues.
+
+2️⃣ Student Validation (Business Rules)
+
+Each student must satisfy the following rules:
+name must NOT be null or empty
+marks must be between 0 and 100
+bankBalance must NOT be negative
+If any rule is violated:
+The student must be rejected
+A meaningful business-level exception must be raised
+Processing of other students must continue
+
+3️⃣ Student Ranking & Sorting (IMPORTANT)
+
+Students must be sorted based on:
+Marks (descending order)
+If marks are equal → Name (ascending order)
+
+After sorting:
+Identify the top 3 students
+Only these students are eligible for rewards
+
+4️⃣ Reward Deposit Operation
+
+Deposit ₹5000 into the bank account of each top 3 student
+Deposit operation must:
+Validate deposit amount
+Prevent invalid updates
+Handle unexpected runtime issues safely
+
+5️⃣ Withdrawal Operation
+
+After reward deposit, each student may attempt to withdraw money.
+
+Withdrawal rules:
+Withdrawal amount must be greater than 0
+Withdrawal amount must NOT exceed available balance
+
+If balance is insufficient:
+Withdrawal must fail
+A custom banking exception must be raised
+Program must continue for other students
+
+⚠️ Exception Handling Requirements (MANDATORY)
+
+Your design must demonstrate the use of ALL exception handling techniques:
+
+🔹 Checked Exceptions
+File reading failures
+External resource access issues
+Must be declared and/or handled properly
+
+🔹 Unchecked Exceptions
+Null values
+Invalid index access
+Logical programming mistakes
+Must be handled where recovery is possible
+
+🔹 Custom Exceptions (Business Meaning)
+You must define custom exceptions for:
+Invalid student data
+Invalid deposit operation
+Insufficient bank balance during withdrawal
+
+These exceptions must:
+Carry meaningful messages
+Represent business logic violations, not technical errors
+
+🔹 throw
+Must be used to explicitly signal:
+Invalid student
+Invalid banking operation
+Business rule violation
+
+🔹 throws
+Must be used to:
+Delegate exception responsibility between methods
+Clearly define which layer is responsible for handling failures
+
+🔹 try–catch–finally
+Used to:
+Protect risky operations
+Recover gracefully from failures
+Ensure cleanup or final logging is always executed
+
+🧠 Design Expectations (NO CODE, ONLY THINKING)
+Your solution should clearly separate:
+Data loading logic
+Validation logic
+Sorting & ranking logic
+Banking operations
+Exception handling responsibility
+
+Each method must clearly indicate:
+What exception it may throw
+Whether it handles or delegates responsibility
+
+🚫 What NOT to Do
+Do NOT crash the program for one bad student
+Do NOT use throws for unchecked exceptions unnecessarily
+Do NOT catch Throwable or Error
+Do NOT mix business validation with file handling logic
+
+🎯 Final Goal
+
+By implementing this problem, you should be able to:
+✔ Apply real-world sorting logic
+✔ Understand where to throw vs where to catch
+✔ Design clean exception delegation
+✔ Handle both checked & unchecked exceptions correctly
+✔ Think like a production-level Java developer
+
+🔥 Practice Challenge (Mental Only)
+
+Before coding, ask yourself:
+Which methods should throw exceptions?
+Which layer should catch them?
+Which exceptions should be checked vs unchecked?
+Where should sorting happen — before or after validation?
+Should deposit & withdrawal share the same exception type?

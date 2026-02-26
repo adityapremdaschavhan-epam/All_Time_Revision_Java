@@ -1,0 +1,15 @@
+1) Method Reference for Static Method
+<<class-name>>::methodName
+
+2) Method Reference for the Instance Method of a Particular Object
+<<object-name>>::methodName
+
+3) Method Reference for the Instance Method of an Arbitrary Object
+<<object-type>>::methodName
+eg :- Integer::compareTo
+
+4) Method Reference for Constructor
+<<class-name>>::new
+ // create the list of student objects from names
+ Student[] students =  studentNames.stream().map(Student::new).toArray(Student[]::new);
+

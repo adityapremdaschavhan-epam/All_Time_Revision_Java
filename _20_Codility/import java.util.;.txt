@@ -1,0 +1,50 @@
+import java.util.*;
+
+public class Main {
+
+    public static void sortByLength(List<String> list) {
+
+        //  Edge Case 1: Null list
+        if (list == null) {
+            throw new IllegalArgumentException("List cannot be null");
+        }
+
+        //  Edge Case 2: No need to sort
+        if (list.size() <= 1) {
+            return;
+        }
+
+        //  Edge Case 3: Handle null elements safely
+        list.sort(
+                Comparator.nullsLast(
+        // Sort strings based on length (shorter strings first)
+        Comparator.comparing(String::length)
+                  // If two strings have the same length,
+                  // sort them using natural alphabetical order
+                  .thenComparing(Comparator.naturalOrder())
+
+) // Ensures null values are safely handled and placed at the end
+
+        );
+    }
+
+    public static void main(String[] args) {
+
+        List<String> list = new ArrayList<>(
+                Arrays.asList("Java", "Python", "C#", "HTML", "Kotlin", "C++", "COBOL", "C", null)
+        );
+
+        sortByLength(list);
+
+        System.out.println(list);
+    }
+}
+
+
+comments..
+Comparator.nullsLast(...)
+✔ Purpose
+Handles null values safely.
+✔ Behavior
+Moves null values to the end of the list.
+Prevents NullPointerException.

@@ -1,0 +1,85 @@
+EP + BVA — Quick Scenario-Based Revision Script
+1️⃣ What are EP and BVA? (1-Line Each)
+
+Equivalence Partitioning (EP): Divide inputs into groups where the system behaves the same; test one value per group.
+
+Boundary Value Analysis (BVA): Test edge values (min, max, just inside and outside boundaries) where defects commonly occur.
+
+2️⃣ When to Use EP & BVA
+
+Use EP to reduce test cases.
+
+Use BVA to catch edge-case defects.
+
+Best practice: Apply EP first, then BVA.
+
+3️⃣ Scenario (System Under Test)
+
+Requirement:
+
+Age field accepts values from 18 to 60 (inclusive).
+
+4️⃣ EP — Scenario-Based Explanation
+Identify Partitions
+Partition Type	Input Range	System Behavior
+Valid	18–60	Accepted
+Invalid	<18	Rejected
+Invalid	>60	Rejected
+Invalid	Non-numeric / empty	Error
+EP Test Cases (One per partition)
+Test Value	Expected Result
+30	Accepted
+15	Rejected
+70	Rejected
+"abc"	Error
+
+📌 EP ensures functional coverage with minimum tests.
+
+5️⃣ BVA — Scenario-Based Explanation
+Identify Boundaries
+
+Minimum = 18
+
+Maximum = 60
+
+BVA Test Cases
+Value	Why	Expected
+17	Just below min	Rejected
+18	Min boundary	Accepted
+19	Just above min	Accepted
+59	Just below max	Accepted
+60	Max boundary	Accepted
+61	Just above max	Rejected
+
+📌 BVA focuses on high-risk edge conditions.
+
+6️⃣ EP vs BVA (Quick Comparison)
+EP	BVA
+Covers input groups	Covers edge values
+Reduces test cases	Finds boundary defects
+Misses edge cases	Misses mid-range behavior
+7️⃣ EP + BVA Together (Why Interviewers Like This)
+
+EP → broad input coverage
+
+BVA → critical edge coverage
+
+Together → efficient + reliable testing
+
+8️⃣ Coverage Evaluation Using EP/BVA
+
+✔ All valid inputs tested
+✔ All invalid inputs tested
+✔ All boundaries covered
+
+👉 Test coverage is sufficient
+
+9️⃣ One-Line Interview Answer (Power)
+
+I use Equivalence Partitioning to reduce test cases by grouping similar inputs and Boundary Value Analysis to test edge values, ensuring maximum coverage with minimal effort.
+
+🧠 Ultra-Short Memory Trick
+
+EP = Groups
+BVA = Edges
+EP + BVA = Smart Testing

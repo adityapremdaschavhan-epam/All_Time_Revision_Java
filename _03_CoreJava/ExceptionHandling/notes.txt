@@ -1,0 +1,58 @@
+1️⃣ What is Exception Handling? (Very Simple)
+
+👉 Exception = an unexpected problem that occurs at runtime
+👉 Exception Handling = handling that problem gracefully instead of crashing the program
+
+Example:
+
+int a = 10 / 0;   // Runtime problem → ArithmeticException
+
+Without handling → program crashes
+With handling → program continues safely
+
+2️⃣ Exception Hierarchy (MOST IMPORTANT 🔥)
+
+Java exceptions follow this hierarchy:
+
+java.lang.Object
+   |
+   └── java.lang.Throwable
+         |
+         ├── Error
+         |     └── OutOfMemoryError, StackOverflowError
+         |
+         └── Exception
+               |
+               ├── Checked Exceptions
+               |     └── IOException, SQLException
+               |
+               └── RuntimeException (Unchecked)
+                     └── NullPointerException, ArithmeticException
+👉 Throwable (Root class)
+
+Only Throwable objects can be thrown and caught
+
+3️⃣ Error vs Exception (Important)
+
+❌ Error:- Serious problems
+            Not meant to be handled
+            Example: OutOfMemoryError
+            // DO NOT HANDLE ERRORS
+✅ Exception:- Problems that can be handled
+Divided into:
+Checked
+Unchecked
+
+4️⃣ Checked vs Unchecked Exceptions
+
+✅ Checked Exception
+✔ Checked at compile time
+✔ Must be handled or declared
+Example:
+FileInputStream fis = new FileInputStream("test.txt"); // IOException
+
+AutoBoxing and unboxing
+
+
+inner class
+

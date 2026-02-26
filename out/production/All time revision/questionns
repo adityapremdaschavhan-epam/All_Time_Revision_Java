@@ -1,0 +1,173 @@
+✅ Level 1 — Basic Conversion Practice
+🔹 Q1
+
+Convert a string into a stream and print each character.
+
+Input: "HELLO"
+Output:
+H
+E
+L
+L
+O
+
+🔹 Q2
+
+Count total characters in a string using streams.
+
+Input: "Java"
+Output: 4
+
+🔹 Q3
+
+Count vowels in a string using streams.
+
+Input: "Aditya"
+Output: 3
+
+🔹 Q4
+
+Convert all characters of a string into uppercase using streams.
+
+Input: "hello"
+Output: "HELLO"
+
+✅ Level 2 — Digit Based Questions
+🔹 Q5
+
+Find sum of digits from numeric string.
+
+Input: "12345"
+Output: 15
+
+🔹 Q6
+
+Find product of digits in string.
+
+Input: "234"
+Output: 24
+
+🔹 Q7
+
+Find largest digit in string.
+
+Input: "92841"
+Output: 9
+
+🔹 Q8
+
+Count odd digits in string.
+
+Input: "123456"
+Output: 3
+
+✅ Level 3 — Filtering / Condition Based
+🔹 Q9
+
+Remove all vowels from string using streams.
+
+Input: "StreamAPI"
+Output: "StrmP"
+
+🔹 Q10
+
+Print only uppercase characters.
+
+Input: "JaVaStream"
+Output: "JVS"
+
+🔹 Q11
+
+Remove all digits from string.
+
+Input: "A1B2C3"
+Output: "ABC"
+
+✅ Level 4 — Ordering / Manipulation
+🔹 Q12
+
+Reverse string using streams.
+
+Input: "Java"
+Output: "avaJ"
+
+🔹 Q13
+
+Sort characters of string alphabetically.
+
+Input: "dcba"
+Output: "abcd"
+
+🔹 Q14
+
+Remove duplicate characters.
+
+Input: "programming"
+Output: "progamin"
+
+✅ Level 5 — Conditional Skip / Take
+🔹 Q15
+
+Skip first character if it is digit.
+
+Input: "1Hello"
+Output: "Hello"
+
+🔹 Q16
+
+Take characters until first vowel appears.
+
+Input: "Stream"
+Output: "Str"
+
+✅ Level 6 — Advanced Stream Thinking
+🔹 Q17
+
+Check if string contains only digits using streams.
+
+Input: "12345" → true
+Input: "12A45" → false
+
+🔹 Q18
+
+Check if string is palindrome using streams.
+
+Input: "madam" → true
+
+🔹 Q19
+
+Find frequency of each character using streams.
+
+Input: "hello"
+Output:
+h → 1
+e → 1
+l → 2
+o → 1
+
+✅ Level 7 — Interview Level
+🔹 Q20
+
+Compress string using character frequency.
+
+Input: "aaabbc"
+Output: "a3b2c1"
+
+🔹 Q21
+
+Find first non-repeating character.
+
+Input: "aabbcddee"
+Output: 'c'
+
+⭐ Must Master Patterns
+
+Most questions are built using:
+
+chars()
+map()
+filter()
+reduce()
+skip()
+distinct()
+collect()

@@ -1,0 +1,108 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <!-- ============================= -->
+  <!-- BASIC PROJECT INFO -->
+  <!-- ============================= -->
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.collection.revision</groupId>
+  <artifactId>mvnProfiles</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>mvnProfiles</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+<!--    <skipTest>-->
+<!--      true-->
+<!--    </skipTest>-->
+  </properties>
+
+  <!-- ============================= -->
+  <!-- MAVEN PROFILES -->
+  <!-- ============================= -->
+  <profiles>
+
+    <!-- DEV ENVIRONMENT -->
+    <profile>
+      <id>dev</id>
+      <properties>
+        <!-- Maven property -->
+        <env.name>DEV</env.name>
+      </properties>
+    </profile>
+
+    <!-- TEST ENVIRONMENT -->
+    <profile>
+      <id>test</id>
+      <properties>
+        <env.name>TEST</env.name>
+      </properties>
+    </profile>
+
+    <!-- PROD ENVIRONMENT -->
+    <profile>
+      <id>prod</id>
+      <properties>
+        <env.name>PROD</env.name>
+      </properties>
+    </profile>
+
+  </profiles>
+
+
+
+  <!-- ============================= -->
+  <!-- DEPENDENCIES -->
+  <!-- ============================= -->
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+<!--    <dependency>-->
+<!--      <groupId>junit</groupId>-->
+<!--      <artifactId>junit</artifactId>-->
+<!--      <version>3.8.100</version>-->
+<!--      <scope>compile</scope>-->
+<!--    </dependency>-->
+  </dependencies>
+
+  <!-- ============================= -->
+  <!-- BUILD CONFIGURATION -->
+  <!-- ============================= -->
+  <build>
+    <plugins>
+
+      <!-- Plugin to run Java main class -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.1.0</version>
+
+        <configuration>
+
+          <!-- FULLY QUALIFIED CLASS NAME -->
+          <mainClass>main.java.org.collection.revision.App</mainClass>
+
+          <!-- PASS MAVEN PROFILE PROPERTY TO JVM -->
+          <systemProperties>
+            <systemProperty>
+              <key>env.name</key>
+              <value>${env.name}</value>
+            </systemProperty>
+          </systemProperties>
+
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
+
+</project>

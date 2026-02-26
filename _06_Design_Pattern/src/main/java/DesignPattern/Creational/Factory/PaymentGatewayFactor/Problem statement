@@ -1,0 +1,21 @@
+Problem Statement (TO-DO)
+
+Design a Payment Gateway Factory that supports:
+
+Credit Card
+
+UPI
+
+Net Banking
+
+Requirements
+
+Use Factory Pattern
+
+Client should only depend on Payment interface
+
+Handle invalid payment type gracefully
+
+Make it easy to add new payment modes later
+
+👉 You will implement this fully.

@@ -1,0 +1,20 @@
+PROBLEM 3 — FACTORY (FOR TESTING / AUTOMATION)
+📌 Problem Statement (VERY IMPORTANT)
+
+Design a Browser Driver Factory for test automation.
+
+Scenario
+Your automation framework must support:
+
+Chrome
+Firefox
+Edge
+
+Requirements
+Factory should return appropriate WebDriver
+Browser type should be configurable
+Client test classes must not create drivers directly
+Driver creation logic must be centralized
+
+Easy to extend for new browsers
+👉 You will implement this later (critical for automation interviews).

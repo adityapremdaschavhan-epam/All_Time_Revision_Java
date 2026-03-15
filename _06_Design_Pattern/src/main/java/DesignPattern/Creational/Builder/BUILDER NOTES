@@ -1,0 +1,194 @@
+1️⃣ Builder Pattern — Definition (Theory)
+
+Builder Pattern is a creational design pattern used to construct complex objects step by step while separating the construction process from the object's representation.
+
+Key idea:
+
+Instead of passing many parameters to a constructor,
+we build the object step-by-step using a Builder.
+2️⃣ When to Use Builder Pattern
+
+Use Builder Pattern when:
+
+1️⃣ Object has many parameters
+2️⃣ Some parameters are optional
+3️⃣ Constructors become hard to read
+4️⃣ You want immutable objects
+5️⃣ You want fluent readable API
+
+Example:
+
+new HttpRequest.Builder()
+        .method("POST")
+        .url("/users")
+        .body(json)
+        .timeout(5000)
+        .build();
+
+Much better than:
+
+new HttpRequest("POST","/users",null,null,json,5000);
+3️⃣ Problems Builder Pattern Solves
+1️⃣ Constructor Explosion
+
+Without builder:
+
+User(name, age)
+User(name, age, email)
+User(name, age, email, phone)
+User(name, age, email, phone, address)
+
+This becomes unmanageable.
+
+2️⃣ Parameter Order Confusion
+new User("Aditya",25,"Mumbai","999999");
+
+Hard to understand which parameter is what.
+
+Builder solves this.
+
+4️⃣ Key Characteristics of Builder Pattern
+
+Remember these 5 keywords.
+
+Feature	Explanation
+Private constructor	Prevent direct object creation
+Static Builder class	Responsible for building object
+Fluent API	Methods return this
+build() method	Final object creation
+Validation	Mandatory fields checked in build()
+5️⃣ Standard Builder Structure (Important for Interviews)
+
+Typical builder structure:
+
+class Product {
+
+    private Product(){}
+
+    public static class Builder {
+
+        private Product product;
+
+        public Builder(){
+            product = new Product();
+        }
+
+        public Builder setField(value){
+            product.field = value;
+            return this;
+        }
+
+        public Product build(){
+            return product;
+        }
+    }
+}
+
+Flow:
+
+Builder → configure fields → build() → final object
+6️⃣ Implementation Rules (Very Important)
+Rule 1 — Constructor must be private
+private HttpRequest(){}
+
+Prevents:
+
+new HttpRequest()
+Rule 2 — Builder is usually static
+public static class Builder
+
+So it can be called as:
+
+HttpRequest.Builder
+Rule 3 — Builder methods return this
+
+This enables method chaining.
+
+public Builder method(String method){
+    request.method = method;
+    return this;
+}
+
+Usage:
+
+builder.method().url().body()
+Rule 4 — build() creates final object
+public HttpRequest build(){
+    return request;
+}
+Rule 5 — Validate mandatory fields
+if(request.method == null || request.url == null){
+    throw new IllegalStateException("Method and URL required");
+}
+7️⃣ Advantages of Builder Pattern
+
+Remember these 4 advantages.
+
+1️⃣ Readable object creation
+
+builder.method("POST").url("/users")
+
+2️⃣ Avoids constructor explosion
+
+3️⃣ Handles optional parameters easily
+
+4️⃣ Supports immutable objects
+
+8️⃣ Real World Examples
+
+Many real frameworks use Builder Pattern.
+
+Examples:
+
+OkHttp request builder
+
+Apache HttpClient request builder
+
+Lombok @Builder annotation
+
+Spring Framework uses builders internally
+
+Example from OkHttp:
+
+Request request = new Request.Builder()
+        .url("https://api.github.com")
+        .get()
+        .addHeader("Authorization","token")
+        .build();
+9️⃣ Difference Between Constructor vs Builder
+Constructor	Builder
+Hard to read	Very readable
+Many constructors needed	Single builder
+Parameter order issues	No order issue
+Hard to manage optional fields	Easy optional fields
+🔟 Interview One-Line Summary
+
+If interviewer asks:
+
+"Why Builder Pattern?"
+
+Answer:
+
+Builder Pattern is used to construct complex objects step-by-step, improving readability, avoiding constructor explosion, and handling optional parameters effectively.
+
+⭐ Bonus Interview Insight
+
+Sometimes interviewers ask:
+
+Why not setters instead of builder?
+
+Problem with setters:
+
+User u = new User();
+u.setName("Aditya");
+u.setAge(25);
+
+Issues:
+
+Object can be partially constructed
+
+Not thread safe
+
+Not immutable
+
+Builder avoids these problems.

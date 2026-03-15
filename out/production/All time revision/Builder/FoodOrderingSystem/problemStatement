@@ -1,0 +1,22 @@
+🧩 PROBLEM 1 — BUILDER (FOR UNDERSTANDING)
+📌 Problem Statement
+
+You are building a Food Ordering System.
+
+A Burger can have:
+Mandatory:
+
+Bun
+Patty
+
+Optional:
+
+Cheese
+Lettuce
+Tomato
+Sauce
+
+Requirements:
+Avoid multiple constructors
+Allow flexible combinations
+Ensure readable object creation

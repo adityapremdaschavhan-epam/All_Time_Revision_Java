@@ -121,7 +121,7 @@ public class MapDownStreamsProblem {
 //       CountEmployeesPerDepartment1();
 //       CountEmployeesPerDepartmentBasedOnName();
 //       highestSalaryPerDepartment();                  // -> medium
-        department_ListOfEmployeesSortedBySalary();
+//        department_ListOfEmployeesSortedBySalary();
 
 
 

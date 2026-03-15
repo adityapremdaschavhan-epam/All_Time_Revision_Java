@@ -1,0 +1,39 @@
+You are building a Simple Application Settings Manager.
+
+The application has multiple modules:
+Login module
+Dashboard module
+Reports module
+
+Each module needs access to application settings such as:
+applicationName
+environment (DEV / QA / PROD)
+
+AppSettings.class
+ └── instance ──▶ Object@100
+
+LoginModule      ──▶ reference to Object@100
+DashboardModule  ──▶ reference to Object@100
+ReportsModule    ──▶ reference to Object@100
+
+Requirements
+Settings should be loaded only once
+All modules should see the same settings
+No module should be allowed to create a new Settings object
+Settings object should be globally accessible
+
+🎯 What this problem is testing
+This problem checks whether you understand:
+Why only one object is needed
+How multiple callers share the same instance
+Difference between object creation and object usage
+This is pure Singleton thinking.
+
+🧠 THINK BEFORE CODING (IMPORTANT)
+
+Ask yourself:
+Should every module load settings again? ❌
+Should settings be mutable? ❌
+Where should settings live? ✅ One place
+
+➡ Singleton fits perfectly

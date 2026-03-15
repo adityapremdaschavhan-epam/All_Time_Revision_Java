@@ -83,9 +83,9 @@ public class Mapping {
 
 // ************************************************
 	public static void main(String[] args){
-		// intToSquare();
-		// getStudentNames();
-		//getStudentMarksGreaterThan();
+		 intToSquare();
+		 getStudentNames();
+		getStudentMarksGreaterThan();
 		sortStudent();
 	}
     

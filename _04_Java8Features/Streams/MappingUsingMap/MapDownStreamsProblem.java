@@ -117,11 +117,11 @@ public class MapDownStreamsProblem {
 
     public static void main(String[] args){
 
-//       filterEmployees1();
-//       CountEmployeesPerDepartment1();
-//       CountEmployeesPerDepartmentBasedOnName();
-//       highestSalaryPerDepartment();                  // -> medium
-//        department_ListOfEmployeesSortedBySalary();
+       filterEmployees1();
+       CountEmployeesPerDepartment1();
+       CountEmployeesPerDepartmentBasedOnName();
+       highestSalaryPerDepartment();                  // -> medium
+        department_ListOfEmployeesSortedBySalary();
 
 
 

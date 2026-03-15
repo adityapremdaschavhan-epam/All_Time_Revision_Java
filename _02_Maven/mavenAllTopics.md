@@ -320,6 +320,8 @@ Build failing due to version conflict
 
 ## 🔹 4️⃣ Maven Repositories
 
+## differrence between git and maven repo
+
 ## Local repository
 The local repository is a folder on your system where Maven stores downloaded dependencies.
 📍 Default location:
@@ -448,7 +450,6 @@ Environment-based builds (dev/test/prod)
 
 Profile activation
 Command-line vs POM profiles
-
 
 
 ## 🔹 7️⃣ Maven Dependency Management (Advanced)

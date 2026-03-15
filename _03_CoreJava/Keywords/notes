@@ -42,7 +42,6 @@ Object obj = 2131892221;
             default -> System.out.println("Other");
         }
 
-
 operator overloading:-
 while matching it first chek that datatype then primitve then wrapper class object.
 

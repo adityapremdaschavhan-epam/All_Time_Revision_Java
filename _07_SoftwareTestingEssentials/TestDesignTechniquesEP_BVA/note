@@ -1,22 +1,18 @@
 EP + BVA — Quick Scenario-Based Revision Script
 1️⃣ What are EP and BVA? (1-Line Each)
 
-Equivalence Partitioning (EP): Divide inputs into groups where the system behaves the same; test one value per group.
-
-Boundary Value Analysis (BVA): Test edge values (min, max, just inside and outside boundaries) where defects commonly occur.
+Equivalence Partitioning (EP): Divide inputs into groups where the system behaves
+ the same; test one value per group.
+Boundary Value Analysis (BVA): Test edge values (min, max, just inside and outside
+ boundaries) where defects commonly occur.
 
 2️⃣ When to Use EP & BVA
-
 Use EP to reduce test cases.
-
 Use BVA to catch edge-case defects.
-
 Best practice: Apply EP first, then BVA.
 
 3️⃣ Scenario (System Under Test)
-
 Requirement:
-
 Age field accepts values from 18 to 60 (inclusive).
 
 4️⃣ EP — Scenario-Based Explanation
@@ -37,9 +33,7 @@ Test Value	Expected Result
 
 5️⃣ BVA — Scenario-Based Explanation
 Identify Boundaries
-
 Minimum = 18
-
 Maximum = 60
 
 BVA Test Cases
@@ -58,10 +52,9 @@ EP	BVA
 Covers input groups	Covers edge values
 Reduces test cases	Finds boundary defects
 Misses edge cases	Misses mid-range behavior
+
 7️⃣ EP + BVA Together (Why Interviewers Like This)
-
 EP → broad input coverage
-
 BVA → critical edge coverage
 
 Together → efficient + reliable testing
@@ -76,7 +69,9 @@ Together → efficient + reliable testing
 
 9️⃣ One-Line Interview Answer (Power)
 
-I use Equivalence Partitioning to reduce test cases by grouping similar inputs and Boundary Value Analysis to test edge values, ensuring maximum coverage with minimal effort.
+I use Equivalence Partitioning to reduce test cases by grouping similar inputs
+and Boundary Value Analysis to test edge values, ensuring maximum coverage with
+minimal effort.
 
 🧠 Ultra-Short Memory Trick
 

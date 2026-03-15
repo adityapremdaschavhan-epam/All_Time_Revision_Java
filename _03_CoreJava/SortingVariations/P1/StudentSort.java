@@ -19,7 +19,8 @@ public class StudentSort {
 	// sorting using custom comparator
 	public static List<String> sortStudentUsingComparator(List<Student> studentList){
 		
-		Collections.sort(studentList,(a,b)->{
+		Collections.sort(studentList,
+				(a,b)->{
 			if(a.getScore() != b.getScore()){
 				return b.getScore() - a.getScore();	// desc order
 			}
@@ -48,6 +49,7 @@ public class StudentSort {
 		return names;
 
 	}
+
         /*
 		using Comparable<Student>
 		class Student implements Comparable<Student>{
@@ -79,7 +81,7 @@ public class StudentSort {
 }
 
 /*
-    class Student {
+    class Student  {
     int id;
     String name;
     int score;

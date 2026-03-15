@@ -1,4 +1,3 @@
-
 Package Naming Rules (IMPORTANT for interviews)
 Rule	Example
 All lowercase	com.company.project

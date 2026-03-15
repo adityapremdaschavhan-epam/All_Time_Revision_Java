@@ -1,0 +1,71 @@
+repo in maven
+
+1)difference in git and maven repo
+
+a) local  -> .m2 repo
+            stores download dependency
+b) remote
+central -> mavens own repository
+third party ->
+
+c) maven repo manager
+ nexus - like a cache system or a backed store for maven central repos
+
+d) mirrors in maven ti redirect repo to private remote repo
+
+2) difference between jar and war file
+war has embeded tomacat server
+
+3)maven wrapper
+
+4) pom.xml
+a)
+model version -. 4.0.0
+gav -> technical meta data
+packaging
+name url -. human readable metadata
+dependecies
+build
+    plugins
+    profiles
+
+b) parent pom - child pom.
+
+
+5) settings.xml
+how maven behaves on this machine
+.m2 rpo -> settings.xml
+disk ->
+
+6) life cycle
+a) default ->
+    validate -> structure + pom.xml
+    compile ->
+    install -> store our project jar in m2 repo so that can use in local project
+    deploy ->
+b) clean life cycle
+pre
+clean
+post
+c) site life cycle -> documentation
+
+
+7) dependency management in maven
+gav
+compile
+provided :- not at package or artifact level
+runtime
+test -> compile + test
+system -> local
+transitive
+b) dependency resolution
+-> default nearest neighbour
+-> <exclusions>
+
+6) src main resources ->  .properties
+
+
+
+
+
+

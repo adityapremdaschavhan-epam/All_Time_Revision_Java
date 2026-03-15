@@ -11,7 +11,6 @@ Throwable
 ├── Checked Exceptions
 └── RuntimeException (Unchecked)
 
-
 ---
 
 ## 2️⃣ Error Types (❌ Not Meant to Be Handled)
@@ -137,37 +136,26 @@ class InvalidAgeException extends RuntimeException {
         super(msg);
     }
 }
+
 🔟 Most Asked in Interviews (🔥 MUST REMEMBER)
 Top 10 Exceptions
 
 NullPointerException
-
 ArithmeticException
-
 ArrayIndexOutOfBoundsException
-
 ClassCastException
-
 IllegalArgumentException
-
 NumberFormatException
-
 IOException
-
 SQLException
-
 ClassNotFoundException
-
 FileNotFoundException
 
 🧠 One-Page Memory Trick
 
 Checked → External world problems
-
 Unchecked → Developer mistakes
-
 Error → JVM problems
-
 
 ---
 

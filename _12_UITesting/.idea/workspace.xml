@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="57e24321-6e84-473f-b739-5aa734e06eea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../_02_Maven/notes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_04_Java8Features/FunctionalInterface/FunctionalInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_04_Java8Features/Optionals/OptionalBasicImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_04_Java8Features/Streams/GroupingBY/groupingBy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_04_Java8Features/Streams/LetsPractise.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_04_Java8Features/Streams/MappingUsingMap/Mapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_04_Java8Features/questionBank1/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_04_Java8Features/questionBank1/q1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../_06_Design_Pattern/src/main/java/DesignPattern/Creational/Builder/FoodOrderingSystem/problemStatement" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/All time revision.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/All time revision.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_02_Maven/mavenAllTopics.md" beforeDir="false" afterPath="$PROJECT_DIR$/../_02_Maven/mavenAllTopics.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_02_Maven/mvnProfiles/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../_02_Maven/mvnProfiles/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_03_CoreJava/Arrays_revision_methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_03_CoreJava/Arrays_revision_methods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_03_CoreJava/ExceptionHandling/JavaExceptionTypes.md" beforeDir="false" afterPath="$PROJECT_DIR$/../_03_CoreJava/ExceptionHandling/JavaExceptionTypes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_03_CoreJava/ExceptionHandling/TECHNIQUES TO HANDLE EXCEPTIONS.md" beforeDir="false" afterPath="$PROJECT_DIR$/../_03_CoreJava/ExceptionHandling/TECHNIQUES TO HANDLE EXCEPTIONS.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_03_CoreJava/Keywords/notes" beforeDir="false" afterPath="$PROJECT_DIR$/../_03_CoreJava/Keywords/notes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_03_CoreJava/Packages/Notes.md" beforeDir="false" afterPath="$PROJECT_DIR$/../_03_CoreJava/Packages/Notes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_03_CoreJava/SortingVariations/P1/StudentSort.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_03_CoreJava/SortingVariations/P1/StudentSort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_04_Java8Features/Streams/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../_04_Java8Features/Streams/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_04_Java8Features/Streams/GroupingBY.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_04_Java8Features/Streams/GroupingBY/NestedGroupingBY.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_04_Java8Features/Streams/StreamsByAditya.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_04_Java8Features/Streams/StreamsByAditya.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_06_Design_Pattern/src/main/java/DesignPattern/Creational/Builder/FoodOrderingSystem/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../_06_Design_Pattern/src/main/java/DesignPattern/Creational/Builder/FoodOrderingSystem/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../_07_SoftwareTestingEssentials/TestDesignTechniquesEP_BVA/note" beforeDir="false" afterPath="$PROJECT_DIR$/../_07_SoftwareTestingEssentials/TestDesignTechniquesEP_BVA/note" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/All time revision/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/DesignPattern/A.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/DesignPattern/B.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/DesignPattern/Creational/AbstractFactory/CrossPlatformUI/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/DesignPattern/Creational/AbstractFactory/CrossPlatformUI/Button.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/DesignPattern/Creational/AbstractFactory/CrossPlatformUI/CheckBox.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/DesignPattern/Creational/AbstractFactory/CrossPlatformUI/MacButton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/DesignPattern/Creational/AbstractFactory/CrossPlatformUI/MacCheckBox.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/DesignPattern/Creational/AbstractFactory/CrossPlatformUI/MacFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/DesignPattern/Creational/AbstractFactory/CrossPlatformUI/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/DesignPattern/Creational/AbstractFactory/CrossPlatformUI/OsFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/DesignPattern/Creational/AbstractFactory/CrossPlatformUI/WindowButton.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/DesignPattern/Creational/AbstractFactory/CrossPlatformUI/WindowCheckBox.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/DesignPattern/Creational/AbstractFactory/CrossPlatformUI/WindowsFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/DesignPattern/Creational/Factory/NotificationSystem/Email.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/DesignPattern/Creational/Factory/NotificationSystem/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/DesignPattern/Creational/Factory/NotificationSystem/Notification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/DesignPattern/Creational/Factory/NotificationSystem/NotificationFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/DesignPattern/Creational/Factory/NotificationSystem/PushNotification.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/DesignPattern/Creational/Factory/NotificationSystem/Sms.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/DesignPattern/Creational/Singleton/Application_Setting_Manager/AppSettings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/DesignPattern/Creational/Singleton/Application_Setting_Manager/DashboardModule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/DesignPattern/Creational/Singleton/Application_Setting_Manager/LoginModule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/DesignPattern/Creational/Singleton/Application_Setting_Manager/ReportsModule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/DesignPattern/Creational/Singleton/LoggerManager/Logger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/DesignPattern/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/Streams/GroupingBY.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/Streams/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/StreamsJava/StreamsByAditya.class" beforeDir="false" afterPath="$PROJECT_DIR$/../out/production/All time revision/StreamsJava/StreamsByAditya.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/main/java/DesignPattern/Creational/AbstractFactory/CrossPlatformUI/Problem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/main/java/DesignPattern/Creational/Factory/BrowserDriverFactory/Problem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/main/java/DesignPattern/Creational/Factory/PaymentGatewayFactor/Problem statement" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/main/java/DesignPattern/Creational/Singleton/Application_Setting_Manager/1 Problem Statement" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/main/java/DesignPattern/Creational/Singleton/LoggerManager/1 Problem Statement" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/main/java/DesignPattern/Creational/Singleton/ToDoList" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../out/production/All time revision/main/java/DesignPattern/Creational/Singleton/WebDriverManagerAUTOMATIONTESTING/1 Problem Statement" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="3AyBVAIBgdm7nkDbhNVMnHu884E" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-26cb7f24e5b0-intellij.indexing.shared.core-IU-253.29346.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="57e24321-6e84-473f-b739-5aa734e06eea" name="Changes" comment="" />
+      <created>1773554952348</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1773554952348</updated>
+    </task>
+    <servers />
+  </component>
+</project>

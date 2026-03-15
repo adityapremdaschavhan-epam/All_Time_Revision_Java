@@ -1,0 +1,482 @@
+UI Testing
+Selenium WebDriver
+Selenium’s core features such as browser automation, web element interaction, synchronization techniques, test data handling, and browser-specific configurations.
+learn to integrate Selenium with TestNG/JUnit, implement advanced design patterns like the Page Object Model (POM), perform distributed testing using Selenium Grid, and generate detailed test reports.
+
+## Selenium Fundamentals
+```
+<dependencies>
+
+ <dependency>
+  <groupId>org.seleniumhq.selenium</groupId>
+  <artifactId>selenium-java</artifactId>
+  <version>4.18.1</version>
+ </dependency>
+
+</dependencies>
+```
+
+1) What is Selenium WebDriver?
+It is an API that allows your code to directly control a browser.
+Your code sends commands like:
+
+open page
+click element
+type text
+get value
+
+The browser executes those commands.
+```
+WebDriver driver = new ChromeDriver();
+driver.get("https://example.com");
+```
+
+2️⃣ Browser Drivers
+
+Selenium cannot control browsers directly.
+It uses browser-specific drivers.
+
+Examples:
+
+ChromeDriver → for Google Chrome
+
+GeckoDriver → for Mozilla Firefox
+
+Edge WebDriver → for Microsoft Edge
+
+3️⃣ Selenium Client Libraries
+
+These allow you to write Selenium code in different languages.
+
+4️⃣ Web Elements
+
+Selenium interacts with HTML elements on a webpage.
+Examples:
+
+buttons
+text fields
+links
+dropdowns
+
+Example:
+driver.findElement(By.id("username")).sendKeys("admin");
+
+This means:
+Find element with id = username
+Type "admin"
+
+5. Simple Selenium Example
+```
+WebDriver driver = new ChromeDriver();
+
+driver.get("https://google.com");
+
+driver.findElement(By.name("q"))
+      .sendKeys("Selenium WebDriver");
+
+driver.quit();
+```
+
+6. Where Selenium Fits in Automation Framework
+
+In real projects Selenium is used with:
+
+TestNG → test execution
+JUnit → testing framework
+Maven → dependency management
+Jenkins → CI/CD automation
+
+
+Feature	Selenium WebDriver			Selenium Grid						Selenium IDE
+Purpose	Automate browser actions using code	Run tests in parallel on multiple machines/browsers	Record and playback browser actions
+
+_____________________________________________________________________________________________________________________________________
+
+1) Envirnment setup
+```
+<dependencies>
+
+ <dependency>
+  <groupId>org.seleniumhq.selenium</groupId>
+  <artifactId>selenium-java</artifactId>
+  <version>4.18.1</version>
+ </dependency>
+
+</dependencies>
+
+```
+
+2) Sample selenium code
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class TestBrowser {
+
+    public static void main(String[] args) {
+
+        WebDriver driver = new ChromeDriver();
+
+        driver.get("https://google.com");
+
+        System.out.println(driver.getTitle());
+
+        driver.quit();
+    }
+}
+
+Final Environment Architecture
+
+```
+Java (JDK)
+     ↓
+IDE (IntelliJ / Eclipse)
+     ↓
+Maven Project
+     ↓
+Selenium WebDriver Library
+     ↓
+Browser Driver
+     ↓
+Browser (Chrome / Firefox)
+```
+_____________________________________________________________________________________________________
+
+Element Locators
+
+-> ID, Name, Class Name, Tag Name, 
+---------------
+
+-> Link Text -> <a href="/login">Login</a>
+driver.findElement(By.linkText("Login")).click();
+
+---------------
+
+-> Partial Link Text
+Matches part of the link text.
+HTML:
+<a href="/register">Create New Account</a>
+Selenium:
+driver.findElement(By.partialLinkText("Create")).click();
+Useful when link text is long.
+
+---------------
+-> XPath
+Very powerful locator using XML path syntax.
+
+-> CSS Selector.
+#id			element by id
+.class			element by class
+input[name='email']	attribute selector
+
+
+In Selenium WebDriver, this is done using the findElement() or findElements() methods.
+```
+driver.findElement(By.locatorType("value"));
+```
+
+--> sendKeys() is a method used to type text into an input field (textbox) on a web page, just like a user typing from the keyboard. 
+sendKeys("Hello")        // type text
+sendKeys(Keys.ENTER)     // press Enter
+sendKeys(Keys.TAB)       // press Tab
+sendKeys("Admin123")     // type password
+
+_____________________________________________________________________________________________________________________________________________
+
+1️⃣ Clicking Elements
+--------------------------
+```
+WebElement loginButton = driver.findElement(By.id("loginBtn"));
+loginButton.click();
+```
+2️⃣ Sending Text Input
+-----------------------------
+Used for text fields and search boxes.
+
+WebElement username = driver.findElement(By.name("username"));
+username.sendKeys("admin");
+driver.findElement(By.id("search")).sendKeys(Keys.ENTER);
+
+3️⃣ Clearing Text Fields
+----------------------------
+Used before entering new values.
+WebElement username = driver.findElement(By.id("username"));
+
+username.clear();
+username.sendKeys("newUser");
+
+4️⃣ Reading Text from Elements
+-----------------------------
+Used for validations in automation tests.
+
+String message = driver.findElement(By.id("message")).getText();
+System.out.println(message);
+assertEquals(message.equals("logon successfully"));
+
+5️⃣ Getting Attribute Values
+--------------------------
+Sometimes the value is stored inside HTML attributes.
+
+<input id="username" value="admin">
+String value = driver.findElement(By.id("username"))
+                     .getAttribute("value");
+
+6️⃣ Dropdown Handling
+---------------------------------------------------------
+Dropdowns require the Select class in Selenium.
+Select select = new Select(dropdown);
+selectByVisibleText()
+selectByValue()
+selectByIndex()
+
+<select id="country">
+   <option value="india">India</option>
+   <option value="usa">USA</option>
+</select>
+
+Selenium code:
+
+import org.openqa.selenium.support.ui.Select;
+WebElement dropdown = driver.findElement(By.id("country"));
+Select select = new Select(dropdown);
+select.selectByVisibleText("India");
+
+
+7️⃣ Checking Element State
+-------------------------
+Sometimes we need to verify element conditions.
+
+WebElement checkbox = driver.findElement(By.id("agree"));
+
+Check:
+
+checkbox.isDisplayed();
+checkbox.isEnabled();
+checkbox.isSelected();
+
+Meaning:-
+ 
+Method			Purpose
+isDisplayed()	element visible
+isEnabled()	element clickable
+isSelected()	checkbox/radio selected
+____________________________________________________________________________
+****************
+perform()
+This is VERY important.
+Actions works like a builder pattern.
+Step 1 → Prepare action
+Step 2 → Execute action
+To actually execute it, we call:
+*******************************
+
+1️⃣ Mouse Hover
+ (Move to Element)
+
+Used when a menu appears only after hovering.
+
+Example scenario:
+
+Menu
+ └── Submenu appears when mouse hovers
+
+Code:
+
+import org.openqa.selenium.interactions.Actions;
+WebElement menu = driver.findElement(By.id("menu"));
+Actions actions = new Actions(driver);
+actions.moveToElement(menu).perform();
+
+✔ Moves the mouse over the element.
+
+2️⃣ Right Click
+ (Context Click)
+
+Simulates a right-click.
+
+WebElement element = driver.findElement(By.id("button"));
+Actions actions = new Actions(driver);
+actions.contextClick(element).perform();
+
+✔ Opens context menu.
+
+3️⃣ Double Click
+
+Simulates double-click action.
+
+WebElement element = driver.findElement(By.id("doubleClickBtn"));
+Actions actions = new Actions(driver);
+actions.doubleClick(element).perform();
+
+✔ Useful for UI elements that trigger double-click events.
+
+4️⃣ Drag and Drop
+
+Used when dragging an element and dropping it somewhere.
+
+Example:
+
+Drag item → Drop into container
+
+Code:
+
+WebElement source = driver.findElement(By.id("drag"));
+WebElement target = driver.findElement(By.id("drop"));
+Actions actions = new Actions(driver);
+actions.dragAndDrop(source, target).perform();
+
+✔ Moves element from source → destination.
+
+5️⃣ Keyboard Events
+
+Keyboard actions simulate shortcut keys.
+
+Example: Press ENTER
+
+driver.findElement(By.id("search"))
+      .sendKeys(Keys.ENTER);
+
+Example: Copy-Paste
+
+WebElement field = driver.findElement(By.id("input"));
+field.sendKeys("Selenium");
+Actions actions = new Actions(driver);
+actions.keyDown(Keys.CONTROL)
+       .sendKeys("a")
+       .sendKeys("c")
+       .keyUp(Keys.CONTROL)
+       .perform();
+
+Common keyboard keys come from: :---[ org.openqa.selenium.Keys ]
+
+Examples:
+
+Key			Usage
+ENTER		submit forms
+TAB			move to next field
+ESCAPE		close popups
+CONTROL	shortcuts
+
+________________________________________________________________________________________________________________
+
+Sysnchronisation
+
+AJAX requests
+JavaScript rendering
+Network delay
+Dynamic DOM updates
+
+If Selenium tries to interact before the element is ready, tests fail.
+
+Types of Waits in Selenium
+Wait Type	Purpose
+Implicit Wait	Global wait for elements
+Explicit Wait	Wait for a specific condition
+Fluent Wait	Advanced explicit wait with polling
+
+-----------------------------------------------------------------
+
+1️⃣ Implicit Wait
+
+Implicit wait tells Selenium:
+"Wait up to X seconds for an element before throwing an exception."
+
+Example:
+driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+✔ Applies to all elements globally.
+
+Limitations:
+Cannot wait for specific conditions
+Less control
+
+2️⃣ Explicit Wait
+
+Explicit wait waits for a specific condition.
+
+Classes used:
+
+WebDriverWait
+ExpectedConditions
+
+```
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+WebElement element = wait.until(
+        ExpectedConditions.visibilityOfElementLocated(By.id("loginBtn"))
+);
+
+element.click();
+
+```
+Wait up to 10 seconds until element becomes visible
+
+Common conditions:
+
+Condition			Purpose
+visibilityOfElementLocated	element visible
+elementToBeClickable		element clickable
+presenceOfElementLocated	element present in DOM
+textToBePresentInElement	verify text appears
+
+Example:
+
+wait.until(ExpectedConditions.elementToBeClickable(By.id("submit"))).click();
+
+✔ Most commonly used wait in automation frameworks.
+
+3️⃣ Fluent Wait
+
+Fluent wait is an advanced version of explicit wait.
+
+Features:
+Custom timeout
+Custom polling interval
+Ignore specific exceptions
+
+Example:
+```
+import org.openqa.selenium.support.ui.FluentWait;
+
+Wait<WebDriver> wait = new FluentWait<>(driver)
+        .withTimeout(Duration.ofSeconds(20))
+        .pollingEvery(Duration.ofSeconds(2))
+        .ignoring(NoSuchElementException.class);
+
+WebElement element = wait.until(
+        driver -> driver.findElement(By.id("loginBtn"))
+);
+
+element.click();
+```
+
+_______________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

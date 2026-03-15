@@ -1,0 +1,40 @@
+1. list.sort() — Best Overall Choice
+
+Time: O(n log n)
+Space: O(log n)
+Performance: Fastest practical option
+Behavior: Modifies original list
+Use Case: When you want high performance and in-place sorting
+Industry Status: Most preferred modern approach
+
+
+
+ 2. Comparator + list.sort() — Best for Custom Sorting
+
+Time: O(n log n)
+Space: O(log n)
+Performance: Slight overhead due to comparator logic
+Behavior: Modifies original list
+Use Case: Sorting based on length, reverse order, multiple rules, or business logic
+Industry Status: Widely used in real-world applications
+
+
+
+ 3. stream().sorted() — Best for Immutability & Functional Style
+
+Time: O(n log n)
+Space: O(n) (creates new list)
+Performance: Slightly slower due to stream overhead
+Behavior: Original list remains unchanged
+Use Case: Stream pipelines, functional programming, immutable data handling
+
+
+
+ 4. Collections.sort() — Legacy Approach
+
+Time: O(n log n)
+Space: O(log n)
+Performance: Same as list.sort()
+Behavior: Modifies original list
+Use Case: Maintaining older Java codebases
+Industry Status: Gradually replaced by list.sort()

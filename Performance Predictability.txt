@@ -1,0 +1,17 @@
+Performance Predictability
+
+Production code values consistent performance over micro-optimizations.
+
+Comparator.comparing provides:
+
+Predictable runtime
+JVM optimizations support
+Cleaner bytecode generation
+Industry Standardization
+
+Java ecosystem guidelines and frameworks:
+
+Prefer Comparator.comparing
+Encourages uniform coding style
+Improves team collaboration
+ 

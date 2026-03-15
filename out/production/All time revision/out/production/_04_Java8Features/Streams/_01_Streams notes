@@ -1,0 +1,71 @@
+First, what is a Collector?
+👉 A Collector is used at the end of a stream to collect the processed data
+into a final form.
+📌 collect() is the terminal operation
+📌 Collectors is a utility class that provides ready-made collectors
+1️⃣ Collectors.toList()
+📌 Converts stream into a List
+2️⃣ Collectors.toSet()
+📌 Converts stream into a Set (removes duplicates)
+3️⃣ Collectors.toMap()
+📌 Converts stream into a Map (key → value)
+Map<Integer, String> map =
+    list.stream()
+        .collect(Collectors.toMap(
+            s -> s.getId(),     // key
+            s -> s.getName()    // value
+        ));
+⚠️ Important: Keys must be unique, otherwise exception occurs.
+🧠 Interview Tip:
+If duplicate keys → provide merge function
+4️⃣ Collectors.counting()
+📌 Counts elements in stream
+5️⃣ Collectors.summingInt()
+📌 Sums values
+int totalMarks =students.stream()
+        .collect(Collectors.summingInt(Student::getMarks));
+Related:
+->summingLong()
+->summingDouble()
+7️⃣ Collectors.maxBy() / minBy()
+📌 Find max or min element
+Optional<Student> topper =
+    students.stream()
+        .collect(Collectors.maxBy(
+            Comparator.comparing(Student::getMarks)
+        ));
+🧠 Returns Optional → may be empty
+8️⃣ Collectors.groupingBy()
+📌 Groups elements by a property
+Map<String, List<Student>> groupByDept =
+    students.stream()
+        .collect(Collectors.groupingBy(Student::getDepartment));
+
+🧠 Real-life:
+Students grouped by department
+Employees grouped by role
+Orders grouped by status
+With counting:
+Map<String, Long> countByDept =
+    students.stream()
+        .collect(Collectors.groupingBy(
+            Student::getDepartment,
+            Collectors.counting()
+));
+9️⃣ Collectors.partitioningBy()
+📌 Splits into two groups only (true / false)
+Map<Boolean, List<Student>> result =
+    students.stream()
+        .collect(Collectors.partitioningBy(
+            s -> s.getMarks() > 60
+));
+🔟 Collectors.joining()
+📌 Joins strings
+String names =
+    list.stream()
+        .collect(Collectors.joining(", "));
+
+Result:
+Ram, Shyam, Mohan
+With prefix & suffix:
+Collectors.joining(", ", "[", "]");

@@ -1,10 +1,8 @@
 package StreamsJava;
 
-
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -116,8 +114,9 @@ public class StreamsByAditya {
          System.out.println("Vowels is as follow " + str.chars().
                  mapToObj(c->(char)c).
                  filter(vowelCheck).count());
-
      }
+
+
 
 
     static void main(String[] args) {
@@ -133,7 +132,7 @@ public class StreamsByAditya {
 //            findSecondLargest();
 //        integerToStringOperations();
 //        String ↔ chars ↔ digits ↔ streams ↔ processing
-           StringPipeline();
+//           StringPipeline();
 
 
     }

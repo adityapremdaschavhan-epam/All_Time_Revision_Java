@@ -1,15 +1,13 @@
 🧱 PHASE 1 — ALL TECHNIQUES TO HANDLE EXCEPTIONS (Complete Coverage)
 
 Your goal here is:
-
 👉 Know every tool Java gives you to handle errors, and when to use which tool.
 *******************************************************************************
 
 ## 1️⃣ try – catch – finally (Core of Exception Handling)
 🔹 Why it exists
 To prevent program crash when a runtime problem occurs.
-
-✅ Basic Structure
+ Basic Structure
 ```
 try {
 // risky code
